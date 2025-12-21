@@ -1,0 +1,16 @@
+pageInfo:
+  title: Nerdlandia Dashboard
+  description: Serviços self-hosted da equipe Nerdlandia
+
+sections:
+  - name: Serviços
+    items:
+      - title: Nextcloud
+        description: Arquivos e colaboração
+        url: https://nextcloud.nerdlandia.me
+      - title: Jellyfin
+        description: Streaming de mídia
+        url: https://jellyfin.nerdlandia.me
+      - title: Dashy
+        description: Dashboard de serviços
+        url: https://dashy.nerdlandia.me

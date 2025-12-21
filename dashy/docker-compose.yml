@@ -1,0 +1,15 @@
+services:
+  dashy:
+    image: lissy93/dashy
+    container_name: dashy
+    environment:
+      - PORT=8080
+    volumes:
+      - ./config/conf.yml:/app/user-data/conf.yml
+    restart: unless-stopped
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    external: true

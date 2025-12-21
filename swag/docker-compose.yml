@@ -1,0 +1,26 @@
+services:
+  swag:
+    image: lscr.io/linuxserver/swag
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Maceio
+      URL: nerdlandia.me
+      SUBDOMAINS: nextcloud,jellyfin,dashy
+      VALIDATION: http
+    volumes:
+      - ./config:/config
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - proxy_net
+    restart: unless-stopped
+
+networks:
+  proxy_net:
+    external: true
+
